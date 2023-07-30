@@ -17,7 +17,6 @@ export const ProfilePage = () => {
 
   }, [getAccessTokenSilently()])
 
-  console.log(accessToken)
   if (!user) {
     return null;
   }

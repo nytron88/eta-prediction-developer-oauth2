@@ -2,8 +2,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import React, { useEffect, useState } from "react";
 import { CodeSnippet } from "../components/code-snippet";
 import { PageLayout } from "../components/page-layout";
-import { getServerOneApproval } from "../services/server-one-approval";
-import { getServerTwoApproval } from "../services/server-two-approval";
+import { getServerApproval } from "../services/server-approval";
 
 export const InstructionsPage = () => {
   const [message, setMessage] = useState("");
@@ -15,9 +14,19 @@ export const InstructionsPage = () => {
 
     const getMessage = async () => {
       const accessToken = await getAccessTokenSilently();
-      const { dataServerOne, errorServerOne } = await getServerOneApproval(accessToken);
-      const { dataServerTwo, errorServerTwo } = await getServerTwoApproval(accessToken);
-    
+      // const { dataServerOne, errorServerOne } = await getServerOneApproval(accessToken);
+      // const { dataServerTwo, errorServerTwo } = await getServerTwoApproval(accessToken);
+      
+      const { data, errorData } = await getServerApproval(accessToken)
+
+      const dataServerOne = data[0];
+      const errorServerOne = errorData[0];
+      const dataServerTwo = data[1];
+      const errorServerTwo = errorData[1];
+      
+      console.log(dataServerOne)
+      console.log(dataServerTwo)
+
       if (!isMounted) {
         return;
       }
