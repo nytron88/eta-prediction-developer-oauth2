@@ -10,7 +10,7 @@ export const getServerApproval = async (accessToken) => {
     const errorData = []
     for (let i = 0; i < apiServerUrls.length; i++) {
         const config = {
-            url: `${apiServerUrls[i]}/dev/get_instructions`,
+            url: `${apiServerUrls[i]}/api/dev/get_instructions`,
             method: "GET",
             headers: {
             "content-type": "application/json",
