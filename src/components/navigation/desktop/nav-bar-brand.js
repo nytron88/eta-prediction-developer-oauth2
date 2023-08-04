@@ -7,9 +7,10 @@ export const NavBarBrand = () => {
       <NavLink to="/">
         <img
           className="nav-bar__logo"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT-_WGwB79yneED83NOF3CftGJW-6RNDUK-jkQuG5CC8KULB7q4GcYlgnKWdCBBlB1Qnk&usqp=CAU"
-          alt="MIT Camera Culture Logo"
-          width="50"
+          src="/mit-media-lab.svg"
+          alt="MIT Media Lab Logo"
+          width="82.313"
+          height="45"
         />
       </NavLink>
     </div>
