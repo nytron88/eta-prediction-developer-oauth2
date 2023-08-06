@@ -19,16 +19,6 @@ export const MobileNavBarTabs = ({ handleClick }) => {
             label="Developer"
             handleClick={handleClick}
           />
-          <MobileNavBarTab
-            path="/user"
-            label="User"
-            handleClick={handleClick}
-          />
-          <MobileNavBarTab
-            path="/scientist"
-            label="Scientist"
-            handleClick={handleClick}
-          />
         </>
       )}
     </div>

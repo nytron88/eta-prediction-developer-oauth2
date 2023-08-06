@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { PageLoader } from "./components/page-loader";
 import { AuthenticationGuard } from "./components/authentication-guard";
-import { InstructionsPage } from "./pages/instructions-page";
+import { DeveloperPage } from "./pages/developer-page";
 import { CallbackPage } from "./pages/callback-page";
 import { HomePage } from "./pages/home-page";
 import { NotFoundPage } from "./pages/not-found-page";
@@ -28,8 +28,8 @@ export const App = () => {
         element={<AuthenticationGuard component={ProfilePage} />}
       />
       <Route
-        path="/instructions"
-        element={<AuthenticationGuard component={InstructionsPage} />}
+        path="/developer"
+        element={<AuthenticationGuard component={DeveloperPage} />}
       />
       <Route path="/callback" element={<CallbackPage />} />
       <Route path="*" element={<NotFoundPage />} />
